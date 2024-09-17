@@ -14,6 +14,10 @@ class Documents(models.Model):
         return self.title
     
 
-
+class Category(models.Model):
+    name:str = models.CharField(max_length=100, help_text="Название категории")
+    
+    def __str__(self) -> str:
+        return self.name
 
 
