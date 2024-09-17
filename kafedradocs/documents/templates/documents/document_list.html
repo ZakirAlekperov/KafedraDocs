@@ -1,5 +1,5 @@
 <h1>Список документов</h1>
-<a href="{& url 'document_create' &}"> Добавить новый документ</a>
+<a href="{% url 'document_create' %}"> Добавить новый документ</a>
 <ul>
     {% for document in documents %}
     <li>{{ documents.title }} - {{ document.document_type }}</li>
