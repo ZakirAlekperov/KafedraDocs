@@ -1,0 +1,12 @@
+<h1>Список документов</h1>
+<a href="{% url 'document_create' %}">Добавить новый документ</a>
+
+{% if documents %}
+    <ul>
+        {% for document in documents %}
+            <li>{{ document.title }} - {{ document.document_type }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Нет доступных документов.</p>
+{% endif %}

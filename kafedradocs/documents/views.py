@@ -14,7 +14,8 @@ def document_list(request):
             HttpResponse: Рендеринг шаблона с контекстом документов.
     """
     documents = Document.objects.all()
-    return render(request, 'documents/documents_list.html', {'documents':documents})
+    return render(request, 'document_list.html', {'documents':documents})
+
 
 
 def document_create(request):
@@ -34,4 +35,4 @@ def document_create(request):
             return redirect('document_list')
     else:
         form = DocumentForm()
-    return render(request, 'documents/document_form.html', {'form': form})
+    return render(request, 'document_form.html', {'form': form})

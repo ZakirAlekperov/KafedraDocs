@@ -1,8 +1,7 @@
 from django import forms
 from .models import Document
 
-
 class DocumentForm(forms.ModelForm):
     class Meta:
         model = Document
-        fields = ['titile', 'document_type', 'file']
+        fields = ['title', 'document_type', 'file']
